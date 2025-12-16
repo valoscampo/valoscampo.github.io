@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Scienza delle Costruzioni - Trave adimensionale</title>
+  <title>Caratteristiche delle sollecitazioni online - CDS ONLINE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -15,18 +15,24 @@
       text-align: center;
     }
 
-    /* Griglia principale: colonne laterali + contenuto centrale */
-    .page-grid {
-      display: grid;
-      grid-template-columns: 140px minmax(0, 1fr) 140px;
-      gap: 12px;
-      margin-top: 16px;
+    .intro {
+      max-width: 900px;
+      margin: 12px auto 18px auto;
+      padding: 16px;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      line-height: 1.65;
+      background: #fafafa;
     }
-
-    .side-ad {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .intro h3 {
+      margin-top: 0;
+    }
+    .intro ul {
+      margin: 8px 0 0 18px;
+    }
+    .intro .small {
+      font-size: 12px;
+      color: #555;
     }
 
     .layout {
@@ -79,21 +85,15 @@
       font-size: 12px;
       color: #555;
     }
-    .ad-container {
-      border: 1px dashed #aaa;
-      border-radius: 8px;
-      padding: 8px;
-      text-align: center;
-      font-size: 12px;
-    }
 
-    @media (max-width: 1000px) {
-      .page-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .side-ad {
-        display: none; /* nasconde le colonne laterali su schermi piccoli */
-      }
+    footer {
+      margin: 18px 0 6px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+    footer a {
+      color: inherit;
     }
 
     @media (max-width: 800px) {
@@ -102,163 +102,306 @@
       }
     }
   </style>
+  <style>
+  .auth-card{
+    max-width: 920px;
+    margin: 14px auto 18px auto;
+    padding: 16px;
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  }
+  .auth-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom: 12px;
+  }
+  .auth-title{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 2px;
+  }
+  .auth-subtitle{
+    font-size: 13px;
+    color:#555;
+    line-height:1.4;
+  }
+  .auth-badge{
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #e7e7e7;
+    background:#fafafa;
+    color:#333;
+    user-select:none;
+    white-space:nowrap;
+  }
+  .auth-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .auth-field span{
+    display:block;
+    font-size: 12px;
+    color:#444;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .auth-field input{
+    width:100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background:#fcfcfc;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .auth-field input:focus{
+    border-color:#bdbdbd;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
+  }
+  .auth-actions{
+    display:flex;
+    gap: 10px;
+    flex-wrap:wrap;
+    margin-top: 12px;
+    align-items:center;
+  }
+  .auth-btn{
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #d8d8d8;
+    background:#fff;
+    cursor:pointer;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .auth-btn.primary{
+    border-color:#111;
+    background:#111;
+    color:#fff;
+  }
+  .auth-btn.danger{
+    border-color:#c62828;
+    background:#fff5f5;
+    color:#b71c1c;
+  }
+  .auth-btn:active{
+    transform: translateY(1px);
+  }
+  .auth-msg{
+    margin: 12px 0 0 0;
+    font-size: 13px;
+    color:#b00020;
+    min-height: 18px;
+  }
+  @media (max-width: 720px){
+    .auth-grid{ grid-template-columns: 1fr; }
+  }
+</style>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9758548272257438"
-     crossorigin="anonymous"></script>
-  
 </head>
 <body>
-  <h1>App Scienza delle Costruzioni</h1>
-  <h2>Trave adimensionale - Vincoli, carichi, reazioni e diagrammi</h2>
+  <h1>Caratteristiche delle sollecitazioni online - CDS ONLINE</h1>
+  <h2>CDS ONLINE: vincoli, carichi, reazioni e diagrammi delle sollecitazioni</h2>
+  
 
-  <!-- GRIGLIA A 3 COLONNE: SX ADV / CENTRO APP / DX ADV -->
-  <div class="page-grid">
-    <!-- Colonna pubblicità sinistra -->
-    <div class="side-ad">
-      <div class="ad-container">
-        Spazio pubblicità sinistra
-        <br /><span class="small">(banner verticale)</span>
-      </div>
-    </div>
-
-    <!-- CONTENUTO CENTRALE (APP) -->
+  <!-- INIZIO LOGIN / REGISTRAZIONE -->
+  <section id="authBox" class="auth-card">
+  <div class="auth-header">
     <div>
-      <div class="layout">
-        <!-- PANNELLO INPUT -->
-        <div class="card">
-          <h3>1. Vincoli alle estremità</h3>
+      <div class="auth-title">Area utenti</div>
+      <div class="auth-subtitle">Accedi o registrati per salvare preferenze e sbloccare funzioni PRO.</div>
+    </div>
+    <div class="auth-badge" id="authStatusBadge" style="display:none;"></div>
+  </div>
 
-          <label>
-            Vincolo all'estremità sinistra:
-            <select id="leftSupport">
-              <option value="cerniera">Cerniera (Rx, Ry)</option>
-              <option value="incastro">Incastro (Rx, Ry, M)</option>
-              <option value="carrello">Carrello (Ry)</option>
-              <option value="doppio_pendolo">Doppio pendolo (Ry, M)</option>
-              <option value="doppio_doppio_pendolo">Doppio doppio pendolo (M)</option>
-            </select>
-          </label>
+  <div class="auth-grid">
+    <label class="auth-field">
+      <span>Email</span>
+      <input id="authEmail" type="email" placeholder="email@esempio.com" autocomplete="email">
+    </label>
 
-          <label>
-            Vincolo all'estremità destra:
-            <select id="rightSupport">
-              <option value="cerniera">Cerniera (Rx, Ry)</option>
-              <option value="incastro">Incastro (Rx, Ry, M)</option>
-              <option value="carrello">Carrello (Ry)</option>
-              <option value="doppio_pendolo">Doppio pendolo (Ry, M)</option>
-              <option value="doppio_doppio_pendolo">Doppio doppio pendolo (M)</option>
-            </select>
-          </label>
+    <label class="auth-field">
+      <span>Password</span>
+      <input id="authPass" type="password" placeholder="min 6 caratteri" autocomplete="current-password">
+    </label>
+  </div>
 
-          <h3>2. Carico trasversale e lunghezza (adimensionali)</h3>
+  <div class="auth-actions">
+    <button id="btnLogin" class="auth-btn primary">Login</button>
+    <button id="btnRegister" class="auth-btn">Registrati</button>
+    <button id="btnLogout" class="auth-btn danger" style="display:none;">Logout</button>
+  </div>
 
-          <label>
-            Tipo di carico:
-            <select id="loadType">
-              <option value="point">Carico concentrato</option>
-              <option value="udl">Carico distribuito uniforme</option>
-            </select>
-          </label>
+  <p id="authMsg" class="auth-msg"></p>
+</section>
+  <!-- FINE LOGIN / REGISTRAZIONE -->
 
-          <label>
-            Valore adimensionale del carico (simbolo):
-            <input type="text" id="loadSymbol" value="q" />
-            <span class="small">
-              Esempi: <code>q</code>, <code>2q</code>, <code>3q</code>, <code>P</code>, <code>2P</code>...
-            </span>
-          </label>
 
-          <label>
-            Lunghezza adimensionale della trave (simbolo):
-            <input type="text" id="lengthSymbol" value="L" />
-            <span class="small">
-              Esempi: <code>L</code>, <code>2L</code>, <code>3L</code>...
-            </span>
-          </label>
+  <!-- CONTENUTO TESTUALE (per qualità sito / revisione AdSense) -->
+  <section class="intro">
+    <h3>Cos’è questo strumento</h3>
+    <p>
+      Questo sito offre uno strumento interattivo dedicato allo studio della <strong>Scienza delle Costruzioni</strong>.
+      È pensato per studenti universitari, docenti e appassionati di ingegneria strutturale che vogliono
+      visualizzare in modo immediato vincoli, carichi e risposte della trave.
+    </p>
 
-          <div id="pointLoadInputs">
-            <label>
-              Posizione adimensionale del carico concentrato (0 &le; a &le; L):
-              <input type="number" id="a" value="0.5" step="0.1" />
-            </label>
-            <span class="small">
-              Per ora questa posizione viene usata solo se lo schema è semplicemente appoggiato.
-            </span>
-          </div>
+    <h3>A cosa serve</h3>
+    <ul>
+      <li>Supportare lo studio individuale e la preparazione degli esami.</li>
+      <li>Visualizzare schemi di corpo libero, reazioni e diagrammi delle sollecitazioni.</li>
+      <li>Comprendere convenzioni di segno e andamento qualitativo di taglio e momento.</li>
+      <li>Sperimentare rapidamente diverse combinazioni di vincoli e carichi.</li>
+    </ul>
 
-          <h3>3. Sforzo assiale (opzionale)</h3>
-          <label>
-            <input type="checkbox" id="enableAxial" />
-            Applica sforzo assiale costante lungo la trave
-          </label>
-          <div id="axialInputs">
-            <label>
-              Valore adimensionale (simbolo):
-              <input type="text" id="axialSymbol" value="N" />
-              <span class="small">
-                Esempi: <code>N</code>, <code>2N</code>, <code>-N</code>...
-              </span>
-            </label>
-            <label>
-              Verso (convenzione interna):
-              <select id="axialDirection">
-                <option value="tensione">Trazione (N &gt; 0)</option>
-                <option value="compressione">Compressione (N &lt; 0)</option>
-              </select>
-            </label>
-          </div>
+    <h3>Come si usa</h3>
+    <p>
+      Seleziona i vincoli alle estremità, scegli il tipo di carico (concentrato o distribuito),
+      inserisci i simboli e premi <strong>“Calcola reazioni e diagrammi”</strong>.
+      Lo schema di corpo libero e i diagrammi vengono aggiornati automaticamente.
+    </p>
 
-          <button onclick="calcolaEDisegna()">Calcola reazioni e diagrammi</button>
+    <p class="small">
+      Nota: alcune configurazioni possono essere limitate (ad esempio, il carico concentrato è gestito solo per
+      trave semplicemente appoggiata). In quel caso lo strumento ti mostrerà un messaggio.
+    </p>
+  </section>
 
-          <div class="results" id="results"></div>
+  <!-- CONTENUTO CENTRALE (APP) -->
+  <div class="layout">
+    <!-- PANNELLO INPUT -->
+    <div class="card">
+      <h3>1. Vincoli alle estremità</h3>
 
-          <!-- SPAZIO PUBBLICITÀ CENTRALE (3° slot) -->
-          <div class="ad-container" style="margin-top: 12px;">
-            Spazio pubblicità centrale
-            <br /><span class="small">(banner orizzontale)</span>
-          </div>
-        </div>
+      <label>
+        Vincolo all'estremità sinistra:
+        <select id="leftSupport">
+          <option value="cerniera">Cerniera (Rx, Ry)</option>
+          <option value="incastro">Incastro (Rx, Ry, M)</option>
+          <option value="carrello">Carrello (Ry)</option>
+          <option value="doppio_pendolo">Doppio pendolo (Ry, M)</option>
+          <option value="doppio_doppio_pendolo">Doppio doppio pendolo (M)</option>
+        </select>
+      </label>
 
-        <!-- PANNELLI: FBD + DIAGRAMMI -->
-        <div>
-          <div class="card">
-            <h3>2. Schema di corpo libero</h3>
-            <p class="small">
-              Trave con i vincoli selezionati, carico applicato e vettori di reazione (in forma simbolica).<br/>
-              Convenzione momento: <strong>M positivo antiorario</strong>.
-            </p>
-            <canvas id="canvasFBD"></canvas>
-          </div>
+      <label>
+        Vincolo all'estremità destra:
+        <select id="rightSupport">
+          <option value="cerniera">Cerniera (Rx, Ry)</option>
+          <option value="incastro">Incastro (Rx, Ry, M)</option>
+          <option value="carrello">Carrello (Ry)</option>
+          <option value="doppio_pendolo">Doppio pendolo (Ry, M)</option>
+          <option value="doppio_doppio_pendolo">Doppio doppio pendolo (M)</option>
+        </select>
+      </label>
 
-          <div class="card" id="diagramsCard">
-            <h3>3. Diagrammi delle sollecitazioni</h3>
-            <p class="small">
-              T(x): convenzione classica (positivo sopra, negativo sotto).<br/>
-              M(x): <strong>momento positivo disegnato sotto</strong>, negativo sopra.<br/>
-              N(x): positivo = trazione (diagramma sopra l'asse).
-            </p>
+      <h3>2. Carico trasversale e lunghezza (adimensionali)</h3>
 
-            <p><strong>Taglio T(x)</strong></p>
-            <canvas id="canvasV"></canvas>
+      <label>
+        Tipo di carico:
+        <select id="loadType">
+          <option value="point">Carico concentrato</option>
+          <option value="udl">Carico distribuito uniforme</option>
+        </select>
+      </label>
 
-            <p><strong>Momento flettente M(x)</strong></p>
-            <canvas id="canvasM"></canvas>
+      <label>
+        Valore adimensionale del carico (simbolo):
+        <input type="text" id="loadSymbol" value="q" />
+        <span class="small">
+          Esempi: <code>q</code>, <code>2q</code>, <code>3q</code>, <code>P</code>, <code>2P</code>...
+        </span>
+      </label>
 
-            <p><strong>Sforzo assiale N(x)</strong></p>
-            <canvas id="canvasN"></canvas>
-          </div>
-        </div>
+      <label>
+        Lunghezza adimensionale della trave (simbolo):
+        <input type="text" id="lengthSymbol" value="L" />
+        <span class="small">
+          Esempi: <code>L</code>, <code>2L</code>, <code>3L</code>...
+        </span>
+      </label>
+
+      <div id="pointLoadInputs">
+        <label>
+          Posizione adimensionale del carico concentrato (0 &le; a &le; L):
+          <input type="number" id="a" value="0.5" step="0.1" />
+        </label>
+        <span class="small">
+          Per ora questa posizione viene usata solo se lo schema è semplicemente appoggiato.
+        </span>
       </div>
+
+      <h3>3. Sforzo assiale (opzionale)</h3>
+      <label>
+        <input type="checkbox" id="enableAxial" />
+        Applica sforzo assiale costante lungo la trave
+      </label>
+      <div id="axialInputs">
+        <label>
+          Valore adimensionale (simbolo):
+          <input type="text" id="axialSymbol" value="N" />
+          <span class="small">
+            Esempi: <code>N</code>, <code>2N</code>, <code>-N</code>...
+          </span>
+        </label>
+        <label>
+          Verso (convenzione interna):
+          <select id="axialDirection">
+            <option value="tensione">Trazione (N &gt; 0)</option>
+            <option value="compressione">Compressione (N &lt; 0)</option>
+          </select>
+        </label>
+      </div>
+
+      <button onclick="calcolaEDisegna()">Calcola reazioni e diagrammi</button>
+
+      <div class="results" id="results"></div>
     </div>
 
-    <!-- Colonna pubblicità destra -->
-    <div class="side-ad">
-      <div class="ad-container">
-        Spazio pubblicità destra
-        <br /><span class="small">(banner verticale)</span>
+    <!-- PANNELLI: FBD + DIAGRAMMI -->
+    <div>
+      <div class="card">
+        <h3>2. Schema di corpo libero</h3>
+        <p class="small">
+          Trave con i vincoli selezionati, carico applicato e vettori di reazione (in forma simbolica).<br/>
+          Convenzione momento: <strong>M positivo antiorario</strong>.
+        </p>
+        <canvas id="canvasFBD"></canvas>
+      </div>
+
+      <div class="card" id="diagramsCard">
+        <h3>3. Diagrammi delle sollecitazioni</h3>
+        <p class="small">
+          T(x): convenzione classica (positivo sopra, negativo sotto).<br/>
+          M(x): <strong>momento positivo disegnato sotto</strong>, negativo sopra.<br/>
+          N(x): positivo = trazione (diagramma sopra l'asse).
+        </p>
+
+        <p><strong>Taglio T(x)</strong></p>
+        <canvas id="canvasV"></canvas>
+
+        <p><strong>Momento flettente M(x)</strong></p>
+        <canvas id="canvasM"></canvas>
+
+        <p><strong>Sforzo assiale N(x)</strong></p>
+        <canvas id="canvasN"></canvas>
       </div>
     </div>
   </div>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
 
   <script>
     const leftSupportSelect  = document.getElementById('leftSupport');
@@ -430,7 +573,6 @@
       const lengthParsed = parseLengthSymbol(lengthSymbolInput.value);
 
       const factorLoad   = loadParsed.factor;
-      const symbolLoad   = loadParsed.symbol;
       const symbolLoadText = loadParsed.raw; // ciò che ha scritto l'utente (q, 2q, 3q...)
       const L            = lengthParsed.Lnum;
       const symbolL      = lengthParsed.symbol;
@@ -455,7 +597,7 @@
       if (!L || L <= 0) {
         resultsDiv.innerHTML = '<p style="color:red;">La lunghezza L deve essere positiva.</p>';
         clearDiagrams();
-        drawFBD(left, right, L, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
+        drawFBD(left, right, L, 0, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
         return;
       }
 
@@ -478,14 +620,14 @@
             <p class="small">Usa il carico distribuito per qualsiasi combinazione di vincoli.</p>
           `;
           clearDiagrams();
-          drawFBD(left, right, L, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
+          drawFBD(left, right, L, 0, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
           return;
         }
 
         if (isNaN(a) || a < 0 || a > L) {
           resultsDiv.innerHTML = '<p style="color:red;">Per il carico concentrato: a deve essere tra 0 e L.</p>';
           clearDiagrams();
-          drawFBD(left, right, L, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
+          drawFBD(left, right, L, 0, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
           return;
         }
 
@@ -583,7 +725,7 @@
         } catch (e) {
           resultsDiv.innerHTML = `<p style="color:red;">Errore nel calcolo degli spostamenti: ${e.message}</p>`;
           clearDiagrams();
-          drawFBD(left, right, L, q, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
+          drawFBD(left, right, L, q, 0, 0, 0, 0, 0, 0, N_value, symbolLoadText, symbolL, loadType, '', '', '', '', N_sym);
           return;
         }
         for (let i = 0; i < m; i++) {
@@ -591,7 +733,6 @@
           d[gi] = df[i];
         }
       }
-      // se freeIndices.length==0 (doppio incastro): d = [0,0,0,0]
 
       const Kd = multiplyMatrixVector(K, d);
       const R  = Kd.map((v, i) => v - F[i]);
@@ -612,9 +753,6 @@
         Ns.push(N_value);
       }
 
-      // forma simbolica CORRETTA:
-      // RA = coeff · (symbolLoadText) · (symbolL)
-      // con coeff = RA_up / (factorLoad * L)
       if (Math.abs(factorLoad) > 1e-12 && Math.abs(L) > 1e-12) {
         const RA_c = RA_up / (factorLoad * L);
         const RB_c = RB_up / (factorLoad * L);
@@ -713,7 +851,6 @@
       ctx.save();
       ctx.lineWidth = 1;
       if (type === 'cerniera' || type === 'carrello') {
-        // y è la coordinata del vertice superiore del triangolo
         ctx.beginPath();
         ctx.moveTo(x, y);
         ctx.lineTo(x - w / 2, y + h);
@@ -759,7 +896,6 @@
     function drawMomentArrow(ctx, x, y) {
       const r = 12;
       ctx.beginPath();
-      // momento positivo: antiorario
       ctx.arc(x, y, r, -0.2 * Math.PI, 1.4 * Math.PI, false);
       ctx.stroke();
       const angle = 1.4 * Math.PI;
@@ -786,7 +922,6 @@
       canvas.width = w; canvas.height = h;
       ctx.clearRect(0, 0, w, h);
 
-      // Trave spostata più in basso
       const marginX = 70;
       const beamY = h * 0.78;
       const xLeft = marginX;
@@ -794,17 +929,14 @@
       const beamLenPx = xRight - xLeft;
 
       ctx.lineWidth = 1.5;
-      // trave
       ctx.beginPath();
       ctx.moveTo(xLeft, beamY);
       ctx.lineTo(xRight, beamY);
       ctx.stroke();
 
-      // supporti un po' sotto la trave (piccolo gap)
       drawSupport(ctx, xLeft, beamY + 6, left, 1);
       drawSupport(ctx, xRight, beamY + 6, right, 1);
 
-      // carico distribuito: più in alto
       if (loadType === 'udl' && Math.abs(q) > 1e-6) {
         const nArr = 8;
         for (let i = 0; i <= nArr; i++) {
@@ -816,7 +948,6 @@
         ctx.fillText(symbolLoadText, (xLeft + xRight) / 2, beamY - 60);
       }
 
-      // carico concentrato: più in alto
       if (loadType === 'point' && Math.abs(P) > 1e-6) {
         const pos = (a / L) || 0;
         const x = xLeft + beamLenPx * pos;
@@ -826,11 +957,9 @@
         ctx.fillText(symbolLoadText, x, beamY - 65);
       }
 
-      // reazioni verticali (ben staccate dai vincoli)
       ctx.font = '11px Arial';
       ctx.textAlign = 'center';
 
-      // A sinistra
       if (Math.abs(RA) > 1e-4) {
         const xRA = xLeft - 30;
         const yBase = beamY - 10;
@@ -846,7 +975,6 @@
         }
       }
 
-      // B destra
       if (Math.abs(RB) > 1e-4) {
         const xRB = xRight + 30;
         const yBase = beamY - 10;
@@ -862,7 +990,6 @@
         }
       }
 
-      // momenti (ancora più esterni)
       if (Math.abs(MA) > 1e-3) {
         const xM = xLeft - 55;
         const yM = beamY - 15;
@@ -880,7 +1007,6 @@
         ctx.fillText(MB_text || '', xM, yM - 24);
       }
 
-      // sforzo assiale: freccia orizzontale a metà trave
       if (Math.abs(N_value) > 1e-4) {
         const xMidL = xLeft + beamLenPx * 0.3;
         const xMidR = xLeft + beamLenPx * 0.7;
@@ -888,16 +1014,13 @@
         ctx.font = '11px Arial';
         ctx.textAlign = 'center';
         if (N_value > 0) {
-          // trazione: verso destra
           drawArrow(ctx, xMidL, yN, xMidR, yN);
         } else {
-          // compressione: verso sinistra
           drawArrow(ctx, xMidR, yN, xMidL, yN);
         }
         ctx.fillText(N_text || '', (xMidL + xMidR) / 2, yN - 8);
       }
 
-      // lunghezza
       ctx.font = '11px Arial';
       ctx.textAlign = 'center';
       ctx.fillText(symbolL, (xLeft + xRight) / 2, beamY + 25);
@@ -910,7 +1033,6 @@
       ctx.lineTo(xRight, beamY + 22);
       ctx.stroke();
 
-      // --- leggenda convenzione momento (in alto a destra) ---
       const legendX = w - 90;
       const legendY = 22;
 
@@ -922,7 +1044,6 @@
       const cy = legendY + 15;
       const r  = 10;
 
-      // arco antiorario
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, 1.5 * Math.PI, false);
       ctx.stroke();
@@ -941,8 +1062,89 @@
       ctx.fill();
     }
 
-    // avvio
     calcolaEDisegna();
   </script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+  import {
+    getAuth,
+    onAuthStateChanged,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
+  // 🔥 IL TUO firebaseConfig (GIÀ CORRETTO)
+  const firebaseConfig = {
+    apiKey: "AIzaSyBUt0FWbnjctGtocSJ7qZg4HvcIe4vx4Yo",
+    authDomain: "cds-online-b50a7.firebaseapp.com",
+    projectId: "cds-online-b50a7",
+    storageBucket: "cds-online-b50a7.firebasestorage.app",
+    messagingSenderId: "118885117604",
+    appId: "1:118885117604:web:f76ca4805ed0b059178031"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Riferimenti DOM (già presenti nel tuo HTML)
+  const authBox     = document.getElementById("authBox");
+  const emailInput  = document.getElementById("authEmail");
+  const passInput   = document.getElementById("authPass");
+  const msg         = document.getElementById("authMsg");
+  const btnLogin    = document.getElementById("btnLogin");
+  const btnRegister = document.getElementById("btnRegister");
+  const btnLogout   = document.getElementById("btnLogout");
+
+  function setMsg(t) {
+    if (msg) msg.textContent = t || "";
+  }
+
+  // 🔑 Stato autenticazione
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // utente loggato → nascondi box login
+      if (authBox) authBox.style.display = "none";
+    } else {
+      // utente NON loggato → mostra box
+      if (authBox) authBox.style.display = "block";
+    }
+  });
+
+  // Login
+  btnLogin.addEventListener("click", async () => {
+    setMsg("");
+    try {
+      await signInWithEmailAndPassword(
+        auth,
+        emailInput.value.trim(),
+        passInput.value
+      );
+    } catch (e) {
+      setMsg("Errore login: email o password non valide.");
+    }
+  });
+
+  // Registrazione
+  btnRegister.addEventListener("click", async () => {
+    setMsg("");
+    try {
+      await createUserWithEmailAndPassword(
+        auth,
+        emailInput.value.trim(),
+        passInput.value
+      );
+    } catch (e) {
+      setMsg("Errore registrazione (password min 6 caratteri o email già usata).");
+    }
+  });
+
+  // Logout (opzionale)
+  btnLogout.addEventListener("click", async () => {
+    await signOut(auth);
+  });
+</script>
+
 </body>
 </html>
